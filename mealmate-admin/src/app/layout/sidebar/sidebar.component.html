@@ -1,0 +1,84 @@
+
+   
+<div class="sidebar-wrapper" data-sidebar-layout="stroke-svg" [ngClass]="{ 'active': isSidebarOpen }" (click)="hideScrollbar();toggleHeaderClass()">
+    <div>
+        <div class="logo-wrapper">
+            <a><img class="img-fluid for-light" style="width: 100px;height: 50px;" src="../../../assets/images/mealmate.jpg" alt="" />
+            </a>
+            <div class="back-btn" (click)="hideScrollbar();toggleHeaderClass()">
+                <i class="fa fa-angle-left close-icon"></i>
+            </div>
+            <div class="logo-icon-wrapper">
+                <a ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-grid status_toggle middle sidebar-toggle">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg></a>
+        </div>
+    
+        </div>
+        <nav class="sidebar-main">
+            <div class="left-arrow" id="left-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-arrow-left">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </div>
+            <div id="sidebar-menu">
+                <nav class="sidebar-main">
+                    <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+                    <div id="sidebar-menu">
+                        <ul class="sidebar-links" id="simple-bar">
+                            <li class="sidebar-list">
+                                <a class="sidebar-link sidebar-title" href="#" routerLink="admin/order-details">
+                                    <span class="lan-3">order-details</span></a>
+                            </li>
+                            <li class="sidebar-list">
+                                <a class="sidebar-link sidebar-title" href="#" routerLink="admin/carousel">
+                                    <span class="lan-3">Carousel</span></a>
+                            </li>
+                            <li class="sidebar-list">
+                               <a class="sidebar-link sidebar-title" href="#" routerLink="admin/carouseldetails">
+                                    <span class="lan-3">Carousel details</span></a>
+                            </li>
+                            <li class="sidebar-list">
+                              <a class="sidebar-link sidebar-title" href="#" routerLink="admin/latest-product">
+                                    <span class="lan-3">latest-product</span></a>
+                            </li>
+                            <li class="sidebar-list">
+                               <a class="sidebar-link sidebar-title" href="#" routerLink="admin/latest-product-details">
+                                    <span class="lan-3">Products details</span></a>
+                            </li>
+                            <li class="sidebar-list">
+                               <a class="sidebar-link sidebar-title" href="#" routerLink="admin/category">
+                                    <span class="lan-3">Category</span></a>
+                            </li>
+                            <li class="sidebar-list">
+                                <a class="sidebar-link sidebar-title" href="#" routerLink="admin/category-details">
+                                    <span class="lan-3">Category-details</span></a>
+                            </li>
+                           
+                        </ul>
+                     
+                
+                    </div>
+                    <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+                  </nav>
+               
+            </div>
+            <div class="right-arrow" id="right-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-arrow-right">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </nav>
+    </div>
+</div>

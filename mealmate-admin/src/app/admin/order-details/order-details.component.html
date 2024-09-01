@@ -1,0 +1,48 @@
+<div style="overflow-x: auto; margin-left: 280px;margin-top: 50px;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr style="background-color: #f2f2f2;">
+          <th style="width: 150px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">First Name</th>
+          <th style="width: 150px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Last Name</th>
+          <th style="width: 220px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Email</th>
+          <th style="width: 150px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">State</th>
+          <th style="width: 150px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Building</th>
+          <th style="width: 220px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Street</th>
+          <th style="width: 150px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">City</th>
+          <th style="width: 150px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Zip Code</th>
+          <th style="width: 220px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Product Name</th>
+          <th style="width: 220px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Description</th>
+          <th style="width: 150px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Price</th>
+          <th style="width: 150px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Stock Quantity</th>
+          <th style="width: 220px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Product Image</th>
+          <th style="width: 150px; text-align: center; padding: 10px; border-bottom: 2px solid #ddd;">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of ProductData">
+          <!-- User Details -->
+          <td style="width: 150px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ UserDetailsData.first_name }}</td>
+          <td style="width: 150px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ UserDetailsData.last_name }}</td>
+          <td style="width: 220px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ UserDetailsData.email }}</td>
+          <td style="width: 150px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ UserDetailsData.state }}</td>
+          <td style="width: 150px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ UserDetailsData.building }}</td>
+          <td style="width: 220px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ UserDetailsData.street }}</td>
+          <td style="width: 150px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ UserDetailsData.city }}</td>
+          <td style="width: 150px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ UserDetailsData.ZipCode }}</td>
+  
+          <!-- Product Details -->
+          <td style="width: 220px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ item.name }}</td>
+          <td style="width: 220px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ item.description }}</td>
+          <td style="width: 150px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ item.price }}</td>
+          <td style="width: 150px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">{{ item.stockQuantity }}</td>
+          <td style="width: 220px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">
+            <img *ngFor="let image of item.ProductImage" [src]="baseImageUrl + image.imageUrl" style="height: 100px; width: 100px; margin: 5px;">
+          </td>
+          <td style="width: 150px; text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">
+            <button class="delete-btn" style="padding: 5px 15px; background-color: #f44336; color: white; border: none; border-radius: 4px; cursor: pointer;" (click)="deleteProduct(item.productId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

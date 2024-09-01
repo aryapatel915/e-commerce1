@@ -1,0 +1,141 @@
+.sidebar-wrapper {
+  width: 250px;
+  background-color: #2c3e50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  transition: all 0.3s;
+  z-index: 9999;
+}
+
+.sidebar-wrapper.active {
+  left: -200px;
+}
+
+.sidebar-wrapper .logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0px;
+  background-color: #1a252f;
+}
+
+.sidebar-wrapper .logo-wrapper a {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-wrapper .logo-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebar-wrapper .back-btn,
+.sidebar-wrapper .toggle-sidebar {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.sidebar-wrapper .toggle-sidebar svg {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-wrapper .logo-icon-wrapper {
+  text-align: end;
+  margin: 20px 18px;
+}
+
+.sidebar-wrapper .logo-icon-wrapper a svg {
+  margin: 0;
+  color: #ffffff;
+}
+
+.sidebar-main {
+  padding: 0;
+}
+
+.sidebar-main .left-arrow,
+.sidebar-main .right-arrow {
+  display: none;
+}
+
+.sidebar-main #sidebar-menu {
+  padding: 20px 15px;
+}
+
+.sidebar-main .sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-main .sidebar-links .sidebar-list {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.sidebar-main .sidebar-links .sidebar-list a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.sidebar-main .sidebar-links .sidebar-list a:hover {
+  background-color: #1abc9c;
+}
+
+.sidebar-main .sidebar-links .sidebar-list i {
+  margin-right: 10px;
+}
+
+.sidebar-main .sidebar-links .sidebar-list .badge {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.feather,
+.fa {
+  stroke: currentColor;
+  color: #ffffff;
+}
+
+.feather.feather-align-center,
+.feather.feather-grid,
+.feather.feather-arrow-left,
+.feather.feather-arrow-right {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+      width: 200px;
+  }
+
+  .sidebar-wrapper .logo-wrapper {
+      padding: 10px;
+  }
+
+  .sidebar-main #sidebar-menu {
+      padding: 0 10px;
+  }
+
+  .sidebar-main .sidebar-links .sidebar-list a {
+      padding: 8px 10px;
+  }
+
+  .feather,
+  .fa {
+      width: 20px;
+      height: 20px;
+  }
+}

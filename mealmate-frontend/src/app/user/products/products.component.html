@@ -1,0 +1,130 @@
+<!-- <div class="col-lg-3" *ngFor="let product of ProductData">
+  <div style="max-width: 300px; max-height: 300px; margin-bottom: 60px !important;"
+       class="ltn__product-item ltn__product-item-3 text-center product-wrapper">
+    <div class="product-img product-img-square">
+      <a href="#" *ngFor="let image of product.productImage">
+        <img [src]="baseImageUrl + image.productImage" alt="{{image.productImageID}}"
+             loading="lazy" class="image-position-size popup_cart_image">
+      </a>
+    </div>
+    <div class="product-info">
+      <h3 class="product-title popup_cart_title">
+        <a href="#">{{product.ProductName}}</a>
+      </h3>
+      <div class="product-description">
+        <p>{{product.ProductDescription}}</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div id="shopify-section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4" class="shopify-section">
+
+  <div class="featured-collection-slider ltn__product-tab-area ltn__product-gutter "
+    id="section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4" data-section="tabWithProduct">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title-area ">
+            <h2 class="section-title">Best Selling</h2>
+          </div>
+          <div class="ltn__tab-menu ltn__tab-menu-2 ltn__tab-menu-top-right" >
+            <div class="nav" >
+              <a class="active show" *ngFor="let item of ProductData"  data-toggle="tab" [class.active]="selectedTab === item.category.name"
+                (click)="selectTab(item.category.name)">{{item.category.name}}</a>
+            
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane fade show " *ngFor="let product of ProductData;"
+              [ngClass]="{'tab-pane fade show active': selectedTab === product.category.name, 'tab-pane fade': selectedTab !== product.category.name}"
+              id="tab-template--14970614054979__b1beda09-a029-475d-af74-abbf56beb7a4-tab_with_product-1-men">
+              <div class="row ltn__tab-product-slider-one-active slick-arrow-1" data-slick='{"rows": 2,
+         "slidesToShow": 4,
+          "responsive":[
+              {"breakpoint":992, "settings": {"slidesToShow": 3, "arrows": false, "dots": true} },
+              {"breakpoint":768, "settings": {"slidesToShow": 2, "arrows": false, "dots": true} },
+              {"breakpoint":480, "settings": {"slidesToShow": 2, "slidesToScroll": 2, "arrows": false, "dots": true} }
+            ] 
+
+    }'>
+
+                    
+                <div class="col-lg-3">
+                  <div  style="max-width: 300px; max-height: 300px; margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper">
+                    <div class="product-img product-img-square">
+                      <a class="image-position-wrapper primary_img">
+                        <img *ngFor="let image of product.ProductImage" [src]="baseImageUrl + image.imageUrl"
+                          class="image-position-size" sizes="100vw" width="800"
+                          height="800" alt="A. Stylist Sunglass" loading="lazy">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title">
+                        <a href="#">{{product.name}}</a>
+                      </h3>
+                      <div class="product-description">
+                        <p>Description:- {{product.description}} | Price :- {{product.price}}</p>  
+                      </div>
+                    </div>
+                    <div class="product-hover-action">
+                      <ul>
+                        <li>
+                          <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                            href="javascript:void(0);" onclick="quiqview('a-n-s-product-title')">
+                         {{product.stockQuantity}}
+                          </a>
+                        </li>
+                        <li><a href="javascript:void(0);" (click)="addToCart(product.productId)"
+                            class="ajax-spin-cart ajax-spin-cart-drawer" title="Add to cart">
+                            <span>
+                              <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
+                              <span class="cart-loading"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="cart-added"><i class="fas fa-check"></i></span>
+                              <span class="cart-unavailable"><i class="fas fa-exclamation-triangle"></i></span>
+                            </span>
+                          </a></li>
+                        <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist" (click)="wishlistitems(product.productId)"
+                            href="javascript: void(0)" button-wishlist data-product-handle="a-n-s-product-title">
+                            <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                            <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                            <span class="remove-wishlist" title="Remove From wishlist"><i
+                                class="fas fa-heart"></i></span>
+                          </a></li>
+                        <li>
+                          <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                            data-pid="a-n-s-product-title">
+                            <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+                
+
+              </div>
+              <div class="row">
+                <div class="col-lg-3 text-center mt-20">
+                  <a href="collections/men.html" class="theme-btn-1 btn btn-effect-1">View All</a>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

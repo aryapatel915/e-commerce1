@@ -1,0 +1,21 @@
+<table>
+    <thead>
+      <tr>
+        <th style="width: 450px;">carouselTitle</th>
+        <th style="width: 450px;">Description</th>
+        <th style="width: 450px;">carouselImage</th>
+        <th style="width: 450px;">Button</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of FinalData">
+        <td>{{item.carouselTitle}}</td>
+        <td>{{item.description}}</td>
+        <td><img *ngFor="let items of item?.carouselImage"  src="{{ baseImageUrl + items.carouselImage}}" alt=""></td>
+        <td>
+         
+          <button class="delete-btn" style="padding: 3px 10px;" (click)="deleteUser(item.carouselId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
